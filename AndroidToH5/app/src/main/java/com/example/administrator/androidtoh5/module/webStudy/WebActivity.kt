@@ -11,17 +11,19 @@ import com.example.administrator.androidtoh5.util.WebUtil
 import kotlinx.android.synthetic.main.activity_web.*
 
 /**
- * 1，WebView加载网页和几个常用方法
- *2， 一键滑动到网页的顶部
+ * Created by 舍长
+ * describe:介绍了webView加载网页的几个方法
  */
 class WebActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web)
+        //加载网页url地址
         mWebView.loadUrl("https://www.jianshu.com/u/8c6b4be8770b")
         //暂停webView
         //mWebView.onPause()
+        //监听图片的点击事件
         mImgUp.setOnClickListener(View.OnClickListener {
             //滑动到当前网页的顶部
             top()
